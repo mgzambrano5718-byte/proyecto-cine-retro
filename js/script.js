@@ -82,16 +82,19 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    /* ==========================================
-       Efecto visual del poster
+   /* ==========================================
+       Efecto visual de los posters
        ========================================== */
-    const poster = document.getElementById('poster-peli');
-    if (poster) {
+    // se usa querySelectorAll para seleccionar todas las imágenes con la clase poster-peli
+    const posters = document.querySelectorAll('.poster-peli');
+    
+    // se usa forEach para aplicarle el efecto a cada una de las imágenes
+    posters.forEach(poster => {
         poster.addEventListener('mouseover', () => {
-            poster.style.transform = 'scale(1.05)'; // aumenta un poco el tamaño
+            poster.style.transform = 'scale(1.05)'; // aumenta el tamaño
         });
         poster.addEventListener('mouseout', () => {
             poster.style.transform = 'scale(1)'; // vuelve a la normalidad
         });
-    }
+    });
 });
