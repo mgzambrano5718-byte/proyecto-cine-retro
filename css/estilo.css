@@ -1,0 +1,177 @@
+/* css/estilo.css */
+/* Reseteo básico para evitar inconsistencias en navegadores */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Courier New", Courier, monospace; 
+    background-color: #f4ecd8; 
+    color: #3b2f2f;
+    font-size: 1rem; /* Uso de unidad relativa rem */
+    line-height: 1.5;
+}
+
+/* Encabezado */
+header {
+    background-color: #800000;
+    color: #f0e6d2;
+    text-align: center;
+    padding: 1.5rem;
+    border-bottom: 5px solid #d4af37;
+}
+
+header img {
+    width: 80px;
+    vertical-align: middle;
+    border: 2px solid #d4af37;
+    margin-bottom: 0.5rem;
+}
+
+/* Menú de navegación (Uso de Flexbox para alinear) */
+nav {
+    background-color: #2b2b2b;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+nav a {
+    color: #d4af37;
+    text-decoration: none;
+    font-size: 1.125rem;
+    font-weight: bold;
+    padding: 0.5rem;
+}
+
+/* Foco visible para accesibilidad (Navegación con teclado obligatoria) */
+nav a:hover, nav a:focus {
+    color: #ffffff;
+    text-decoration: underline;
+    outline: 2px dashed #ffffff;
+    outline-offset: 4px;
+}
+
+/* Contenedor central */
+main {
+    width: 90%;
+    max-width: 1000px;
+    margin: 2rem auto;
+}
+
+/* Secciones generales estilo tarjeta */
+section {
+    background-color: #ffffff;
+    border: 2px solid #800000;
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+h2 {
+    color: #800000;
+    border-bottom: 2px solid #d4af37;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Cartelera (Flexbox en lugar del antiguo float: left) */
+.pelicula {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px dashed #3b2f2f;
+    align-items: flex-start;
+}
+
+.pelicula img {
+    width: 130px;
+    border: 3px solid #2b2b2b;
+    transition: transform 0.3s ease;
+}
+
+/* Botones generales */
+button {
+    background-color: #d4af37;
+    color: #3b2f2f;
+    border: 2px solid #800000;
+    padding: 0.75rem 1.5rem;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+button:hover, button:focus {
+    background-color: #e6c55c;
+    outline: 2px dashed #800000;
+    outline-offset: 4px;
+}
+
+/* Estilos del Formulario de Reservas */
+.campo {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.campo label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #800000;
+}
+
+.campo input {
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #3b2f2f;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+.campo input:focus {
+    outline: 2px solid #800000;
+    border-color: #800000;
+}
+
+/* Mensajes de error del formulario */
+.error-msg {
+    color: #d93025;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+    font-weight: bold;
+}
+
+/* Pie de página */
+footer {
+    background-color: #800000;
+    color: #d4af37;
+    text-align: center;
+    padding: 1.5rem;
+    border-top: 5px solid #d4af37;
+    margin-top: 2rem;
+}
+
+/* DISEÑO ADAPTABLE (Media queries para versión móvil) */
+@media (max-width: 600px) {
+    /* La película se apila verticalmente en móviles */
+    .pelicula {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    /* El menú de navegación se apila verticalmente */
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+}

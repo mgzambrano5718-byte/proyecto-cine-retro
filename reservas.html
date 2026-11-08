@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprar Boletos - Cine Teatro Retro</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+    <header>
+        <img src="imgs/logocamara.png" alt="Logotipo de Cine Teatro Retro">
+        <h1>Cine Teatro Retro</h1>
+        <p>La mejor experiencia cinematográfica clásica</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Cartelera</a>
+        <a href="promociones.html">Promociones</a>
+        <a href="reservas.html">Comprar Boletos</a>
+    </nav>
+
+    <main>
+        <section id="reservas">
+            <h2>Comprar Boletos</h2>
+            <p>Reserva tus asientos para la función de hoy.</p>
+            
+            <!-- Atributo novalidate evita que el navegador valide por defecto, para que lo haga nuestro JS -->
+            <form id="form-reservas" novalidate>
+                <div class="campo">
+                    <label for="nombre">Nombre completo:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez">
+                    <span class="error-msg" id="error-nombre"></span>
+                </div>
+
+                <div class="campo">
+                    <label for="correo">Correo electrónico:</label>
+                    <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com">
+                    <span class="error-msg" id="error-correo"></span>
+                </div>
+
+                <div class="campo">
+                    <label for="boletos">Cantidad de boletos:</label>
+                    <input type="number" id="boletos" name="boletos" min="1" max="10" placeholder="0">
+                    <span class="error-msg" id="error-boletos"></span>
+                </div>
+
+                <button type="submit" id="btn-comprar">Confirmar Compra</button>
+                <p id="mensaje-exito" style="display: none;"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Cine Teatro Retro. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
