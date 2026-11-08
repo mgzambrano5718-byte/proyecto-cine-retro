@@ -1,4 +1,4 @@
-/* css/estilo.css */
+
 /* Reseteo básico para evitar inconsistencias en navegadores */
 * {
     box-sizing: border-box;
@@ -30,7 +30,7 @@ header img {
     margin-bottom: 0.5rem;
 }
 
-/* Menú de navegación (Uso de Flexbox para alinear) */
+/* Menú de navegación (se usó Flexbox para alinear) */
 nav {
     background-color: #2b2b2b;
     padding: 1rem;
@@ -79,7 +79,7 @@ h2 {
     margin-bottom: 1.5rem;
 }
 
-/* Cartelera (Flexbox en lugar del antiguo float: left) */
+/* Cartelera */
 .pelicula {
     display: flex;
     gap: 1.5rem;
@@ -115,7 +115,7 @@ button:hover, button:focus {
     outline-offset: 4px;
 }
 
-/* Estilos del Formulario de Reservas */
+/* Estilo del formulario de reservas */
 .campo {
     margin-bottom: 1.5rem;
     display: flex;
@@ -159,7 +159,7 @@ footer {
     margin-top: 2rem;
 }
 
-/* DISEÑO ADAPTABLE (Media queries para versión móvil) */
+/* Diseño adaptable (Media para versión móvil) */
 @media (max-width: 600px) {
     /* La película se apila verticalmente en móviles */
     .pelicula {
